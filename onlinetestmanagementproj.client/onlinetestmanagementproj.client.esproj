@@ -1,0 +1,24 @@
+<Project Sdk="Microsoft.VisualStudio.JavaScript.Sdk/0.5.128-alpha">
+  <PropertyGroup>
+    <StartupCommand>npm run dev</StartupCommand>
+    <JavaScriptTestRoot>src\</JavaScriptTestRoot>
+    <JavaScriptTestFramework>Jest</JavaScriptTestFramework>
+    <!-- Allows the build (or compile) script located on package.json to run on Build -->
+    <ShouldRunBuildScript>false</ShouldRunBuildScript>
+    <!-- Folder where production build objects will be placed -->
+    <PublishAssetsDirectory>$(MSBuildProjectDirectory)\dist</PublishAssetsDirectory>
+  </PropertyGroup>
+  <ItemGroup>
+    <Folder Include="src\assets\CodeEditor\" />
+    <Folder Include="src\assets\Header\" />
+    <Folder Include="src\assets\Home\" />
+    <Folder Include="src\assets\Login\" />
+    <Folder Include="src\assets\DashBoard\" />
+    <Folder Include="src\assets\AttemptQuiz\" />
+    <Folder Include="src\assets\TakeTest\" />
+    <Folder Include="src\assets\Profile\" />
+    <Folder Include="src\assets\Register\" />
+    <Folder Include="src\assets\Test\" />
+    <Folder Include="src\assets\ToDo\" />
+  </ItemGroup>
+</Project>

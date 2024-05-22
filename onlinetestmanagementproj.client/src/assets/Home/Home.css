@@ -1,0 +1,29 @@
+.heading {
+    text-align: center;
+    color: brown;
+}
+
+.container-1 ,.wel{
+    text-align: center;
+    padding: 10px;
+    text-align-last: left;
+}
+
+.content {
+    text-align-last: left;
+    text-align: justify;
+    padding: 20px;
+    text-indent: 20px;
+}
+
+ul {
+    list-style-type: none;
+}
+
+.images {
+    display: flex;
+    justify-content: space-evenly;
+}
+.wel{
+    text-align:center;
+}

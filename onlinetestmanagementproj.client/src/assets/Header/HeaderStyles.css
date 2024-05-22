@@ -1,0 +1,40 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.img1 {
+    border-radius: 50%;
+}
+
+.header1 {
+    display: flex;
+}
+
+.header-container {
+    background-color: #7fbebb;
+    color: #fff;
+    display: flex;
+    padding: 20px;
+    justify-content: space-around;
+}
+
+.nav-item {
+    color: brown;
+}
+
+.nav-list {
+    list-style-type: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.nav-item {
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 16px;
+}
+
+    .nav-item:hover {
+        background-color: #555;
+    }
