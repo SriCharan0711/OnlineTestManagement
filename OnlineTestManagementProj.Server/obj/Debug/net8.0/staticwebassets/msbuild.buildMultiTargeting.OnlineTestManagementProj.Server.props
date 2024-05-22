@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\OnlineTestManagementProj.Server.props" />
+</Project>

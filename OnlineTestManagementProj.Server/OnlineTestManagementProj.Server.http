@@ -1,0 +1,10 @@
+@OnlineTestManagementProj.Server_HostAddress = http://localhost:5118
+
+POST http://localhost:5118/compile/
+Accept: application/json
+Content-Type: application/json
+
+{
+  "code": "Your C++ code here"
+}
+

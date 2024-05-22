@@ -1,0 +1,233 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <InvariantGlobalization>true</InvariantGlobalization>
+    <SpaRoot>..\onlinetestmanagementproj.client</SpaRoot>
+    <SpaProxyLaunchCommand>npm run dev</SpaProxyLaunchCommand>
+    <SpaProxyServerUrl>https://localhost:5173</SpaProxyServerUrl>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\adxintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\altivec.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ammintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\amxcomplexintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\amxfp16intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\amxintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\arm64intr.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\armintr.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\arm_acle.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\arm_cmse.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\arm_neon_sve_bridge.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx2intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512bf16intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512bitalgintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512bwintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512cdintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512dqintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512erintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512fintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512fp16intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512ifmaintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512ifmavlintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512pfintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vbmi2intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vbmiintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vbmivlintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vlbf16intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vlbitalgintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vlbwintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vlcdintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vldqintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vlfp16intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vlintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vlvbmi2intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vlvnniintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vlvp2intersectintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vnniintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vp2intersectintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vpopcntdqintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avx512vpopcntdqvlintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avxifmaintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avxintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avxneconvertintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avxvnniint16intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avxvnniint8intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\avxvnniintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\bmi2intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\bmiintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\builtins.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\cet.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\cetintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\cldemoteintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\clflushoptintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\clwbintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\clzerointrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\cmpccxaddintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\cpuid.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\crc32intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\cuda_wrappers\algorithm" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\cuda_wrappers\bits\shared_ptr_base.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\cuda_wrappers\cmath" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\cuda_wrappers\complex" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\cuda_wrappers\new" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\emmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\enqcmdintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\f16cintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\float.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\fma4intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\fmaintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\fxsrintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\gfniintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\hexagon_circ_brev_intrinsics.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\hexagon_protos.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\hexagon_types.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\hlsl.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\hlsl\hlsl_basic_types.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\hlsl\hlsl_intrinsics.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\hresetintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\htmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\htmxlintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\hvx_hexagon_protos.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ia32intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\immintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\inttypes.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\invpcidintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\iso646.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\keylockerintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\larchintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\limits.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\llvm_libc_wrappers\ctype.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\llvm_libc_wrappers\inttypes.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\llvm_libc_wrappers\stdio.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\llvm_libc_wrappers\stdlib.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\llvm_libc_wrappers\string.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\lwpintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\lzcntintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\mm3dnow.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\mmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\mm_malloc.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\module.modulemap" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\movdirintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\msa.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\mwaitxintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\nmmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\opencl-c-base.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\opencl-c.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\openmp_wrappers\cmath" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\openmp_wrappers\complex" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\openmp_wrappers\complex.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\openmp_wrappers\complex_cmath.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\openmp_wrappers\math.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\openmp_wrappers\new" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\openmp_wrappers\__clang_openmp_device_functions.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\pconfigintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\pkuintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\pmmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\popcntintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ppc_wrappers\bmi2intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ppc_wrappers\bmiintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ppc_wrappers\emmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ppc_wrappers\immintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ppc_wrappers\mmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ppc_wrappers\mm_malloc.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ppc_wrappers\pmmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ppc_wrappers\smmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ppc_wrappers\tmmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ppc_wrappers\x86gprintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ppc_wrappers\x86intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ppc_wrappers\xmmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\prfchiintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\prfchwintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\ptwriteintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\raointintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\rdpruintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\rdseedintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\riscv_ntlh.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\rtmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\s390intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\serializeintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\sgxintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\sha512intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\shaintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\sifive_vector.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\sm3intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\sm4intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\smmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\stdalign.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\stdarg.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\stdatomic.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\stdbool.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\stddef.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\stdint.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\stdnoreturn.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\tbmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\tgmath.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\tmmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\tsxldtrkintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\uintrintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\unwind.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\vadefs.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\vaesintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\varargs.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\vecintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\velintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\velintrin_approx.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\velintrin_gen.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\vpclmulqdqintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\waitpkgintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\wasm_simd128.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\wbnoinvdintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\wmmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\x86gprintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\x86intrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\xmmintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\xopintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\xsavecintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\xsaveintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\xsaveoptintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\xsavesintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\xtestintrin.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_cuda_builtin_vars.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_cuda_cmath.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_cuda_complex_builtins.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_cuda_device_functions.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_cuda_intrinsics.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_cuda_libdevice_declares.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_cuda_math.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_cuda_math_forward_declares.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_cuda_runtime_wrapper.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_cuda_texture_intrinsics.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_hip_cmath.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_hip_libdevice_declares.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_hip_math.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_hip_runtime_wrapper.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__clang_hip_stdlib.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__stddef_max_align_t.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__wmmintrin_aes.h" />
+    <Content Remove="C:\Users\srich_pjup6ou\.nuget\packages\cppsharp\1.1.5.3168\contentFiles\any\any\lib\clang\18\include\__wmmintrin_pclmul.h" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Azure.Core" Version="1.38.0" />
+    <PackageReference Include="Microsoft.AspNetCore.Cors" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.SpaProxy">
+      <Version>8.*-*</Version>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Azure.Cosmos" Version="3.38.1" />
+    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Common\Common.csproj" />
+    <ProjectReference Include="..\onlinetestmanagementproj.client\onlinetestmanagementproj.client.esproj">
+      <ReferenceOutputAssembly>false</ReferenceOutputAssembly>
+    </ProjectReference>
+    <ProjectReference Include="..\ServiceLayer\ServiceLayer.csproj" />
+  </ItemGroup>
+
+</Project>
