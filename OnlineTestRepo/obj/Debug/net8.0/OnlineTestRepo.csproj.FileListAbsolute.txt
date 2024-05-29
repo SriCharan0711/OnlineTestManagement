@@ -18,3 +18,4 @@ C:\Users\srich_pjup6ou\source\repos\OnlineTestManagementProj\OnlineTestRepo\obj\
 C:\Users\srich_pjup6ou\source\repos\OnlineTestManagementProj\OnlineTestRepo\obj\Debug\net8.0\refint\OnlineTestRepo.dll
 C:\Users\srich_pjup6ou\source\repos\OnlineTestManagementProj\OnlineTestRepo\obj\Debug\net8.0\OnlineTestRepo.pdb
 C:\Users\srich_pjup6ou\source\repos\OnlineTestManagementProj\OnlineTestRepo\obj\Debug\net8.0\ref\OnlineTestRepo.dll
+C:\Users\srich_pjup6ou\source\repos\OnlineTestManagementProj\OnlineTestRepo\obj\Debug\net8.0\OnlineTestRepo.sourcelink.json

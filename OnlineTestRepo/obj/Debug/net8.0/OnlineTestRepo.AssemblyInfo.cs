@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineTestRepo")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51c743557cd9ddcb4adc71ecc5d4c855f8f155c7")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineTestRepo")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineTestRepo")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
