@@ -259,6 +259,8 @@ interface Quiz {
     quizName: string;
     quizDescription: string;
     questions: Question[];
+    FacultyID: string;
+    FacultyDepartment: string;
 }
 
 const Faculty: React.FC = () => {
@@ -271,8 +273,10 @@ const Faculty: React.FC = () => {
 
     useEffect(() => {
         const fetchQuizzes = async () => {
+
+            const facultyID = localStorage.getItem('facultyID');
             try {
-                const response = await axios.get('https://localhost:7116/api/Quiz/getQuiz'); // Adjust the URL as needed
+                const response = await axios.get(`https://localhost:7116/api/Quiz/getQuiz/${facultyID}`); // Adjust the URL as needed
                 setQuizzes(response.data);
             } catch (error) {
                 setErrorMessage('Error occurred while fetching quizzes.');

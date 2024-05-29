@@ -1,5 +1,5 @@
 
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import { ToastContainer, toast, Slide } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -19,6 +19,7 @@ interface Quiz {
     QuizName: string;
     QuizDescription: string;
     Questions: Question[];
+    FacultyID: string;
 }
 
 const Test: React.FC = () => {
@@ -28,9 +29,17 @@ const Test: React.FC = () => {
         QuizName: '',
         QuizDescription: '',
         Questions: [{ Id: '1', Text: '', Options: ['', '', '', ''], CorrectOption: '' }],
+        FacultyID:''
     });
     const [errorMessage, setErrorMessage] = useState<string>('');
     const navigate = useNavigate();
+
+    useEffect(() => {
+        const facultyID = localStorage.getItem('facultyID') || '';
+        console.log(facultyID);
+        setQuiz(prevQuiz => ({ ...prevQuiz, FacultyID: facultyID }));
+    }, []);
+
 
     const handleQuizChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
         const { name, value } = e.target;

@@ -1,12 +1,12 @@
 
 
 import AceEditor from 'react-ace';
-import { useState } from 'react';
+import { useState} from 'react';
 import axios, { AxiosResponse } from 'axios';
 import './styles.css';
-import 'ace-builds/src-noconflict/mode-c_cpp'; // Importing C++ mode
-import 'ace-builds/src-noconflict/mode-python'; // Importing Python mode
-import 'ace-builds/src-noconflict/theme-monokai'; // Importing a theme
+import 'ace-builds/src-noconflict/mode-c_cpp'; 
+import 'ace-builds/src-noconflict/mode-python'; 
+import 'ace-builds/src-noconflict/theme-monokai'; 
 
 function CodeEditor() {
     const [language, setLanguage] = useState<string>('c_cpp');
@@ -49,6 +49,8 @@ function CodeEditor() {
         setCode(event.target.value === 'c_cpp' ? initialCodeCPlusPlus : initialCodePython);
     };
 
+   
+
     return (
         <div className="codeeditor">
             <h1>{language === 'c_cpp' ? 'C++' : 'Python'} Code Editor</h1>
@@ -61,13 +63,14 @@ function CodeEditor() {
                 <button onClick={handleReset}>Reset</button>
             </div>
             <AceEditor
+               
                 mode={language}
                 theme="monokai"
                 value={code}
                 onChange={handleChange}
                 name="UNIQUE_ID_OF_DIV"
                 editorProps={{ $blockScrolling: true }}
-                style={{ width: '60%', height: '500px', marginLeft:'200px' , fontSize:'20px'}}
+                style={{ width: '60%', height: '500px', marginLeft: '200px', fontSize:'20px' }}
             />
             <div style={{ marginTop: '20px' }}><h2>Input</h2>
                 <textarea id="inputTextArea" className="form-control w-50 mx-auto"></textarea></div>

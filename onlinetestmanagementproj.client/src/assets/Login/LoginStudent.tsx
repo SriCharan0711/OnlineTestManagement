@@ -2,11 +2,12 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom'
 import './Login.css';
+import axios from 'axios';
 
 interface LoginCredentials {
     emailID: string;
     password: string;
-    studentID: string;
+    rollNo: string;
 }
 
 const LoginStudent: React.FC = () => {
@@ -14,49 +15,72 @@ const LoginStudent: React.FC = () => {
     const [credentials, setCredentials] = useState<LoginCredentials>({
         emailID: '',
         password: '',
-        studentID: '',
+        rollNo: '',
     });
 
-    const [submitted, setSubmitted] = useState<boolean>(false);
+    const [error, setError] = useState<string | null>(null);
+    const [success, setSuccess] = useState<string | null>(null);
+   
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
         setCredentials({ ...credentials, [name]: value });
     };
 
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+    const handleSubmit =async (e: React.FormEvent<HTMLFormElement>) => {
         e.preventDefault();
-        setSubmitted(true);
+      
 
-        if (credentials.emailID && credentials.password && credentials.studentID) {
-            navigate('/student');
+        if (credentials.emailID && credentials.password && credentials.rollNo) {
+            try {
+                const response = await axios.post('https://localhost:7116/api/Student/studentLogin', credentials);
+                if (response.status === 200) {
+                    setSuccess("Login Successful...");
+                    setError(null);
+                    console.log(response.data.department);
+                    localStorage.setItem('department',response.data.department);
+                    setTimeout(() => {
+                        navigate('/student');
+                    }, 2000);
+                }
+            } catch (err) {
+                setError('Login failed. Please check your credentials and try again.');
+                setSuccess("");
+            }
+            
         }
     };
 
     return (
-        <div className="form-container" style={{ marginTop: "100px" }}>
-            <h2>Student Login</h2>
-            <form onSubmit={handleSubmit}>
-                <div>
-                    <label>Student ID:</label>
-                    <input type="text" name="studentID" value={credentials.studentID} onChange={handleChange} />
-                    {submitted && !credentials.studentID && <span>Please enter your Student ID</span>}
-                </div>
-                <div>
-                    <label>Email ID:</label>
-                    <input type="email" name="emailID" value={credentials.emailID} onChange={handleChange} />
-                    {submitted && !credentials.emailID && <span>Please enter your email</span>}
-                </div>
-                <div>
-                    <label>Password:</label>
-                    <input type="password" name="password" value={credentials.password} onChange={handleChange} />
-                    {submitted && !credentials.password && <span>Please enter your password</span>}
-                </div>
+        <div className="container">
+            {error && <h2 className="text-danger text-center">{error}</h2>}
+            {success && <h2 className="text-success text-center">{ success}</h2>}
+            <div className="form-container" style={{ marginTop: "50px" }}>
+                <h2>Student Login</h2>
+                <form onSubmit={handleSubmit}>
+                    <div>
+                        <label>Roll No:</label>
+                        <input type="text" name="rollNo" value={credentials.rollNo} onChange={handleChange} />
+                        {error && !credentials.rollNo && <span>Please enter your Student ID</span>}
+                    </div>
+                    <div>
+                        <label>Email ID:</label>
+                        <input type="email" name="emailID" value={credentials.emailID} onChange={handleChange} />
+                        {error && !credentials.emailID && <span>Please enter your email</span>}
+                    </div>
+                    <div>
+                        <label>Password:</label>
+                        <input type="password" name="password" value={credentials.password} onChange={handleChange} />
+                        {error && !credentials.password && <span>Please enter your password</span>}
+                    </div>
 
-                <button type="submit" >Login</button>
-            </form>
+                    <button className="btn btn-primary" type="submit" >Login</button>
+                </form>
+            </div>
         </div>
+       
     );
 };
 
 export default LoginStudent;
+

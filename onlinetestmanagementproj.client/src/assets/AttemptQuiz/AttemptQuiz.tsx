@@ -1,82 +1,3 @@
-/*
-import React, { useState } from 'react';
-import { useLocation, useNavigate } from 'react-router-dom';
-import './AttemptQuiz.css';
-
-interface Question {
-    id: string;
-    text: string;
-    options: string[];
-    correctOption: string;
-}
-
-interface Quiz {
-    id: string;
-    quizId: string;
-    quizName: string;
-    quizDescription: string;
-    questions: Question[];
-}
-
-const AttemptQuiz: React.FC = () => {
-    const location = useLocation();
-    const navigate = useNavigate();
-    const { quiz } = location.state as { quiz: Quiz };
-
-    const [answers, setAnswers] = useState<{ [key: string]: string }>({});
-
-    const handleOptionChange = (questionId: string, selectedOption: string) => {
-        setAnswers(prevAnswers => ({
-            ...prevAnswers,
-            [questionId]: selectedOption
-        }));
-    };
-
-    const handleSubmit = (event: React.FormEvent) => {
-        event.preventDefault();
-        console.log('Submitted answers:', answers);
-        // Handle the submission logic here, e.g., send answers to the backend
-        navigate('/'); // Navigate back to the main page or show a result page
-    };
-
-    return (
-        <div className="quiz-attempt ">
-            <h2>{quiz.quizName}</h2>
-            <p>{quiz.quizDescription}</p>
-            <form onSubmit={handleSubmit}>
-                {quiz.questions.map((question) => (
-                    <div key={question.id} className="question-block">
-                        <h3>{question.text}</h3>
-                        {question.options.map((option, index) => (
-                            <div className="form-check" key={index}>
-                                <input
-                                    className="form-check-input"
-                                    type="radio"
-                                    name={question.id}
-                                    id={`${question.id}-${index}`}
-                                    value={option}
-                                    checked={answers[question.id] === option}
-                                    onChange={() => handleOptionChange(question.id, option)}
-                                />
-                                <label className="form-check-label" htmlFor={`${question.id}-${index}`}>
-                                    {option}
-                                </label>
-                            </div>
-                        ))}
-                    </div>
-                ))}
-                <button type="submit">Submit Test</button>
-            </form>
-        </div>
-    );
-};
-
-export default AttemptQuiz;
-*/
-
-
-
-
 
 
 import React, { useState } from 'react';
@@ -97,6 +18,8 @@ interface Quiz {
     quizName: string;
     quizDescription: string;
     questions: Question[];
+    FacultyID: string;
+    FacultyDepartment: string;
 }
 
 const AttemptQuiz: React.FC = () => {

@@ -8,6 +8,7 @@ interface Question {
     text: string;
     options: string[];
     correctOption: string;
+
 }
 
 interface Quiz {
@@ -16,6 +17,8 @@ interface Quiz {
     quizName: string;
     quizDescription: string;
     questions: Question[];
+    FacultyID: string;
+    FacultyDepartment: string;
 }
 
 const TakeTest: React.FC = () => {
@@ -25,8 +28,9 @@ const TakeTest: React.FC = () => {
 
     useEffect(() => {
         const fetchQuizzes = async () => {
+            const department =localStorage.getItem('department')
             try {
-                const response = await axios.get('https://localhost:7116/api/Quiz/getQuiz');
+                const response = await axios.get(`https://localhost:7116/api/Quiz/getQuizByDepartment/${department}`);
                 setQuizzes(response.data);
                 console.log(response.data);
             } catch (error) {
