@@ -20,9 +20,14 @@ namespace ServiceLayer.ServiceLayer
            return await _quizRepository.PostQuiz(quiz);
         }
 
-        public async Task<List<Quiz>>GetQuiz()
+        public async Task<List<Quiz>>GetQuiz(string facultyID)
         {
-            return await _quizRepository.GetQuiz();
+            return await _quizRepository.GetQuiz(facultyID);
+        }
+
+        public async Task<List<Quiz>>GetQuizByDepartment(string department)
+        {
+            return await _quizRepository.GetQuizByDepartment(department);
         }
         public async Task DeleteQuiz(Quiz quizObj)
         {

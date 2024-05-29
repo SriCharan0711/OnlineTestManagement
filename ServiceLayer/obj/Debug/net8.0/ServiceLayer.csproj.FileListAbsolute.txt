@@ -20,3 +20,4 @@ C:\Users\srich_pjup6ou\source\repos\OnlineTestManagementProj\ServiceLayer\obj\De
 C:\Users\srich_pjup6ou\source\repos\OnlineTestManagementProj\ServiceLayer\obj\Debug\net8.0\refint\ServiceLayer.dll
 C:\Users\srich_pjup6ou\source\repos\OnlineTestManagementProj\ServiceLayer\obj\Debug\net8.0\ServiceLayer.pdb
 C:\Users\srich_pjup6ou\source\repos\OnlineTestManagementProj\ServiceLayer\obj\Debug\net8.0\ref\ServiceLayer.dll
+C:\Users\srich_pjup6ou\source\repos\OnlineTestManagementProj\ServiceLayer\obj\Debug\net8.0\ServiceLayer.sourcelink.json
