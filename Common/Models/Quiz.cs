@@ -13,7 +13,8 @@ namespace Common.Models
         public string QuizName { get; set; }
         public string QuizDescription { get; set;}
         public List<Question> Questions { get; set; }
-
+        public string FacultyID { get; set; }
+        public string FacultyDepartment {  get; set; }
 
     }
     public class Question
