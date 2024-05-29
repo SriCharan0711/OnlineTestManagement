@@ -55,7 +55,9 @@ app.Run();
 */
 
 
-using Microsoft.Azure.Cosmos;
+
+
+/*using Microsoft.Azure.Cosmos;
 using ServiceLayer.ServiceLayer;
 using OnlineTestRepo.OnlineTestRepo;
 
@@ -70,6 +72,10 @@ builder.Services.AddScoped<IOnlineTestRepo, OnlineTestRepository>();
 builder.Services.AddScoped<IToDoRepository, ToDoRepository>();
 builder.Services.AddScoped<IQuizService, QuizService>();
 builder.Services.AddScoped<IQuizRepository, QuizRepository>();
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<IStudentService, StudentService>();
+builder.Services.AddScoped<IFacultyService, FacultyService>();
+builder.Services.AddScoped<IFacultyRepository, FacultyRepository>();
 
 // Add CORS policy
 builder.Services.AddCors(options =>
@@ -120,6 +126,79 @@ app.UseHttpsRedirection();
 // Remove the duplicate CORS policy usage
 // app.UseCors("AllowSpecificOrigins"); 
 
+app.UseAuthorization();
+app.MapControllers();
+app.Run();*/
+
+
+
+using Microsoft.Azure.Cosmos;
+using ServiceLayer.ServiceLayer;
+using OnlineTestRepo.OnlineTestRepo;
+using Microsoft.Extensions.Logging;
+
+var builder = WebApplication.CreateBuilder(args);
+
+// Add services to the container.
+builder.Services.AddControllers();
+builder.Services.AddEndpointsApiExplorer();
+builder.Services.AddSwaggerGen();
+builder.Services.AddScoped<IOnlineTestService, OnlineTestService>();
+builder.Services.AddScoped<IOnlineTestRepo, OnlineTestRepository>();
+builder.Services.AddScoped<IToDoRepository, ToDoRepository>();
+builder.Services.AddScoped<IQuizService, QuizService>();
+builder.Services.AddScoped<IQuizRepository, QuizRepository>();
+builder.Services.AddScoped<IStudentRepository, StudentRepository>();
+builder.Services.AddScoped<IStudentService, StudentService>();
+builder.Services.AddScoped<IFacultyService, FacultyService>();
+builder.Services.AddScoped<IFacultyRepository, FacultyRepository>();
+
+// Add CORS policy
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowAllOrigins",
+        builder =>
+        {
+            builder.AllowAnyOrigin()
+                   .AllowAnyMethod()
+                   .AllowAnyHeader();
+        });
+});
+
+var configuration = builder.Configuration;
+
+// Add services to the container.
+builder.Services.AddSingleton<CosmosClient>((provider) =>
+{
+    var endpointUri = configuration["CosmosDbSettings:EndpointUri"];
+    var primaryKey = configuration["CosmosDbSettings:PrimaryKey"];
+    var databaseName = configuration["CosmosDbSettings:DatabaseName"];
+    var cosmosClientOptions = new CosmosClientOptions
+    {
+        ApplicationName = databaseName
+    };
+    var loggerFactory = LoggerFactory.Create(builder =>
+    {
+        builder.AddConsole();
+    });
+    var cosmosClient = new CosmosClient(endpointUri, primaryKey, cosmosClientOptions);
+    cosmosClient.ClientOptions.ConnectionMode = ConnectionMode.Direct;
+    return cosmosClient;
+});
+
+var app = builder.Build();
+
+// Configure the HTTP request pipeline.
+app.UseCors("AllowAllOrigins");
+app.UseHttpsRedirection();
+
+if (app.Environment.IsDevelopment())
+{
+    app.UseSwagger();
+    app.UseSwaggerUI();
+}
+
+app.UseHttpsRedirection();
 app.UseAuthorization();
 app.MapControllers();
 app.Run();

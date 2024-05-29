@@ -44,6 +44,10 @@
               "target": "Package",
               "version": "[1.38.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -119,6 +123,14 @@
             "Azure.Core": {
               "target": "Package",
               "version": "[1.38.0, )"
+            },
+            "BCrypt.Net-Next": {
+              "target": "Package",
+              "version": "[4.0.3, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
             },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
@@ -204,6 +216,10 @@
               "target": "Package",
               "version": "[1.38.0, )"
             },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
+            },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",
               "version": "[2.2.0, )"
@@ -279,6 +295,10 @@
             "Azure.Core": {
               "target": "Package",
               "version": "[1.38.0, )"
+            },
+            "Microsoft.AspNetCore.Authentication.JwtBearer": {
+              "target": "Package",
+              "version": "[8.0.5, )"
             },
             "Microsoft.AspNetCore.Cors": {
               "target": "Package",

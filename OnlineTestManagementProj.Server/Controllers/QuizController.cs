@@ -31,11 +31,18 @@ namespace OnlineTestManagementProj.Server.Controllers
             return CreatedAtAction(nameof(PostQuiz), new { id = createdQuiz.id }, createdQuiz);
         }
 
-        [HttpGet("getQuiz")]
-        public async Task<ActionResult<List<Quiz>>>GetQuiz()
+        [HttpGet("getQuiz/{facultyID}")]
+        public async Task<ActionResult<List<Quiz>>>GetQuiz(string facultyID)
         {
-            var quiz=await _quizService.GetQuiz();
+            var quiz=await _quizService.GetQuiz(facultyID);
             return Ok(quiz);    
+        }
+
+        [HttpGet("getQuizByDepartment/{department}")]
+        public async Task<ActionResult<List<Quiz>>> GetQuizByDepartment(string department)
+        {
+            var quiz = await _quizService.GetQuizByDepartment(department);
+            return Ok(quiz);
         }
 
         [HttpDelete("deleteQuiz/{id}/{quizId}")]
