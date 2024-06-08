@@ -38,7 +38,8 @@ const LoginStudent: React.FC = () => {
                     setSuccess("Login Successful...");
                     setError(null);
                     console.log(response.data.department);
-                    localStorage.setItem('department',response.data.department);
+                    localStorage.setItem('department', response.data.department);
+                    localStorage.setItem('studentID', response.data.studentID);
                     setTimeout(() => {
                         navigate('/student');
                     }, 2000);
