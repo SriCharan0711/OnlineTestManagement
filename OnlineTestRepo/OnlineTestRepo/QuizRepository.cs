@@ -13,6 +13,7 @@ namespace OnlineTestRepo.OnlineTestRepo
         private readonly CosmosClient _client;
         private readonly string DataBaseId = "OnlineTestDatabase";
         private readonly string ContainerId = "Quiz";
+        private readonly string QuizResultContainerId = "QuizResults";
 
         public QuizRepository(CosmosClient cosmosClient)
         {
@@ -71,5 +72,42 @@ namespace OnlineTestRepo.OnlineTestRepo
             return response.Resource;
         }
 
+        public async Task<Quiz> GetQuizById(string quizId)
+        {
+            var container = _client.GetContainer(DataBaseId, ContainerId);
+            var query = $"select * from c where c.QuizId=@quizId";
+            var queryDefinition = new QueryDefinition(query).WithParameter("@quizId", quizId);
+            var resultSetIterator = container.GetItemQueryIterator<Quiz>(queryDefinition);
+            if (resultSetIterator.HasMoreResults)
+            {
+                var currentResultSet = await resultSetIterator.ReadNextAsync();
+                return currentResultSet.FirstOrDefault();
+            }
+            return null;
+        }
+
+        public async Task<List<QuizResult>> GetQuizResultsByStudentID(string studentID)
+        {
+            var container = _client.GetContainer(DataBaseId, QuizResultContainerId);
+            var query = $"SELECT * FROM c WHERE c.StudentID = @studentID";
+            var queryDefinition = new QueryDefinition(query).WithParameter("@studentID", studentID);
+            var resultSetIterator = container.GetItemQueryIterator<QuizResult>(queryDefinition);
+            var results = new List<QuizResult>();
+
+            while (resultSetIterator.HasMoreResults)
+            {
+                var currentResultSet = await resultSetIterator.ReadNextAsync();
+                results.AddRange(currentResultSet);
+            }
+
+            return results;
+        }
+
+        public async Task<QuizResult>SaveQuizResult(QuizResult quizResult)
+        {
+            var container = _client.GetContainer(DataBaseId, QuizResultContainerId);
+            var response = await container.CreateItemAsync(quizResult);
+            return response.Resource;
+        }
     }
 }

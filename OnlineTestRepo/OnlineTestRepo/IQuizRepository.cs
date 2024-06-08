@@ -14,5 +14,10 @@ namespace OnlineTestRepo.OnlineTestRepo
         public Task<List<Quiz>> GetQuizByDepartment(string department);
         public Task DeleteQuiz(Quiz quizObj);
         public Task<Quiz> UpdateQuiz(Quiz quizObj);
+        public Task<Quiz> GetQuizById(string quizId);
+        public Task<List<QuizResult>> GetQuizResultsByStudentID(string studentID);
+        public Task<QuizResult> SaveQuizResult(QuizResult quizResult);
+
+
     }
 }
