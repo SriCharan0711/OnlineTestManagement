@@ -38,5 +38,19 @@ namespace ServiceLayer.ServiceLayer
         {
             return await _quizRepository.UpdateQuiz(quizObj);
         }
+
+        public async Task<Quiz> GetQuizById(string quizId)
+        {
+            return await _quizRepository.GetQuizById(quizId);
+        }
+
+        public async Task<List<QuizResult>>GetQuizResultsByStudentID(string studentID)
+        {
+            return await _quizRepository.GetQuizResultsByStudentID(studentID);
+        }
+        public async Task<QuizResult>SaveQuizResult(QuizResult quizResult)
+        {
+            return await _quizRepository.SaveQuizResult(quizResult);
+        }
     }
 }
