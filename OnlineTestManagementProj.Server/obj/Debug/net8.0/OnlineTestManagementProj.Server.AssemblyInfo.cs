@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("OnlineTestManagementProj.Server")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+51c743557cd9ddcb4adc71ecc5d4c855f8f155c7")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+30b94fea6718b0cb13ea1767b897206dd602315c")]
 [assembly: System.Reflection.AssemblyProductAttribute("OnlineTestManagementProj.Server")]
 [assembly: System.Reflection.AssemblyTitleAttribute("OnlineTestManagementProj.Server")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

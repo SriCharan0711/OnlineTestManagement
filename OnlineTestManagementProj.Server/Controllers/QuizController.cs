@@ -64,5 +64,75 @@ namespace OnlineTestManagementProj.Server.Controllers
             var updatedQuiz = await _quizService.UpdateQuiz(quizObj);
             return Ok(updatedQuiz); 
         }
+
+        [HttpPost("submitQuiz")]
+        public async Task<ActionResult<QuizResult>> SubmitQuiz([FromBody] QuizSubmission submission)
+        {
+            if (submission == null || string.IsNullOrEmpty(submission.QuizId) || string.IsNullOrEmpty(submission.StudentID) || submission.Answers == null || !submission.Answers.Any())
+            {
+                return BadRequest("Invalid submission data");
+            }
+
+            var quiz = await _quizService.GetQuizById(submission.QuizId);
+            if (quiz == null)
+            {
+                return NotFound("Quiz not found");
+            }
+
+            var result = CalculateResult(quiz, submission);
+
+            await _quizService.SaveQuizResult(result);
+
+            return Ok(result);
+        }
+
+        private QuizResult CalculateResult(Quiz quiz, QuizSubmission submission)
+        {
+            int totalQuestions = quiz.Questions.Count;
+            int correctAnswers = 0;
+
+            foreach (var question in quiz.Questions)
+            {
+                if (submission.Answers.TryGetValue(question.Id, out var submittedAnswer))
+                {
+                    if (question.Options[question.CorrectOption[0] - 'A'] == submittedAnswer)
+                    {
+                        correctAnswers++;
+                    }
+                }
+            }
+
+            return new Common.Models.QuizResult
+            {
+                id = Guid.NewGuid().ToString(),
+                StudentID = submission.StudentID,
+                QuizID = submission.QuizId,
+                QuizName = submission.QuizName,
+                TotalQuestions = totalQuestions,
+                CorrectAnswers = correctAnswers,
+                Score = ((double)correctAnswers / totalQuestions) * 100,
+                AttemptDate = DateTime.UtcNow,
+                SubmittedAnswers = submission.Answers
+            };
+        }
+
+        [HttpGet("getQuizResults/{studentID}")]
+        public async Task<ActionResult<List<QuizResult>>> GetQuizResults(string studentID)
+        {
+            var results = await _quizService.GetQuizResultsByStudentID(studentID);
+            return Ok(results);
+        }
+
     }
+    public class QuizSubmission
+    {
+        public string QuizId { get; set; }
+        public string QuizName {  get; set; }
+        public string StudentID { get; set; }
+        public Dictionary<string, string> Answers { get; set; }
+    }
+
+   
+
 }
+
