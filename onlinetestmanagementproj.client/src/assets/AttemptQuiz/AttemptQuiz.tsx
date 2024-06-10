@@ -146,7 +146,15 @@ const AttemptQuiz: React.FC = () => {
 };
 
 export default AttemptQuiz;
+
+
+
+
+
+
 */
+
+
 import React, { useState, useEffect } from 'react';
 import { useLocation, useNavigate } from 'react-router-dom';
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -189,7 +197,7 @@ const AttemptQuiz: React.FC = () => {
     const [answers, setAnswers] = useState<{ [key: string]: string }>({});
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
     const [quizResult, setQuizResult] = useState<QuizResult | null>(null);
-    const [timeLeft, setTimeLeft] = useState<number>(60 * 5); // 5 minutes timer
+    const [timeLeft, setTimeLeft] = useState<number>(60 * 1); // 1 minutes timer
     const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
 
     useEffect(() => {
@@ -252,7 +260,12 @@ const AttemptQuiz: React.FC = () => {
     };
 
     const handleEnableFullScreen = () => {
-        const elem = document.documentElement;
+        const elem = document.documentElement as HTMLElement & {
+            mozRequestFullScreen?: () => Promise<void>;
+            webkitRequestFullscreen?: () => Promise<void>;
+            msRequestFullscreen?: () => Promise<void>;
+        };
+
         if (elem.requestFullscreen) {
             elem.requestFullscreen();
         } else if (elem.mozRequestFullScreen) { // Firefox

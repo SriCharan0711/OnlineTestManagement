@@ -35,6 +35,7 @@ const LoginFaculty: React.FC = () => {
                     setError(null);
                     console.log(response.data);
                     localStorage.setItem('facultyID', credentials.facultyID);
+                    localStorage.setItem('facultyDepartment', response.data.department);
                     setTimeout(() => {
                         navigate('/faculty');
                     }, 2000);

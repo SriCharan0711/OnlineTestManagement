@@ -20,6 +20,7 @@ interface Quiz {
     QuizDescription: string;
     Questions: Question[];
     FacultyID: string;
+    FacultyDepartment: string;
 }
 
 const Test: React.FC = () => {
@@ -29,7 +30,8 @@ const Test: React.FC = () => {
         QuizName: '',
         QuizDescription: '',
         Questions: [{ Id: '1', Text: '', Options: ['', '', '', ''], CorrectOption: '' }],
-        FacultyID:''
+        FacultyID: '',
+        FacultyDepartment:''
     });
     const [errorMessage, setErrorMessage] = useState<string>('');
     const navigate = useNavigate();
@@ -102,6 +104,8 @@ const Test: React.FC = () => {
         event.preventDefault();
         try {
             console.log(quiz);
+            const facultyDepartment = localStorage.getItem('facultyDepartment')||'';
+            quiz.FacultyDepartment = facultyDepartment;
             const response = await axios.post('https://localhost:7116/api/Quiz/postQuiz', quiz);
             console.log('Quiz posted successfully:', response.data);
             toast.success('Quiz posted successfully!', {

@@ -275,6 +275,7 @@ const Faculty: React.FC = () => {
         const fetchQuizzes = async () => {
 
             const facultyID = localStorage.getItem('facultyID');
+          
             try {
                 const response = await axios.get(`https://localhost:7116/api/Quiz/getQuiz/${facultyID}`); // Adjust the URL as needed
                 setQuizzes(response.data);
