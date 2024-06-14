@@ -15,6 +15,7 @@ namespace Common.Models
         public List<Question> Questions { get; set; }
         public string FacultyID { get; set; }
         public string FacultyDepartment {  get; set; }
+        public string TestDuration {  get; set; }
 
     }
     public class Question
