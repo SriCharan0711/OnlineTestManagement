@@ -175,6 +175,7 @@ interface Quiz {
     quizDescription: string;
     questions: Question[];
     FacultyID: string;
+    facultyName: string;
     FacultyDepartment: string;
     testDuration: string;
 }

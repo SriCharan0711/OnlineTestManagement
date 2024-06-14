@@ -17,6 +17,7 @@ import FacultyProfile from './assets/Profile/FacultyProfile';
 import StudentProfile from './assets/Profile/StudentProfile';
 import Header from './assets/Header/Header';
 import AttemptQuiz from './assets/AttemptQuiz/AttemptQuiz';
+import UpdateQuiz from './assets/UpdateQuiz';
 
 
 const App: React.FC = () => {
@@ -67,6 +68,10 @@ const App: React.FC = () => {
                     {
                         path: "dashboard",
                         element: <DashBoard />
+                    },
+                    {
+                        path: "updatequiz/:id",
+                        element: <UpdateQuiz />
                     }
                 ]
             },

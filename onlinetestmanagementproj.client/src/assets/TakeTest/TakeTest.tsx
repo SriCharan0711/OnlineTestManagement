@@ -18,6 +18,7 @@ interface Quiz {
     quizDescription: string;
     questions: Question[];
     FacultyID: string;
+    facultyName: string;
     FacultyDepartment: string;
     TestDuration: string;
 }
@@ -57,6 +58,7 @@ const TakeTest: React.FC = () => {
                         <h3>{quiz.quizName}</h3>
                         <p>{quiz.quizDescription}</p>
                         <button onClick={() => handleAttemptQuiz(quiz)} >Attempt Quiz</button>
+                        <p>Posted By: {quiz.facultyName}</p>
                     </div>
                 ))
             ) : (
