@@ -176,6 +176,7 @@ interface Quiz {
     questions: Question[];
     FacultyID: string;
     FacultyDepartment: string;
+    testDuration: string;
 }
 
 interface QuizResult {
@@ -197,7 +198,7 @@ const AttemptQuiz: React.FC = () => {
     const [answers, setAnswers] = useState<{ [key: string]: string }>({});
     const [currentQuestionIndex, setCurrentQuestionIndex] = useState<number>(0);
     const [quizResult, setQuizResult] = useState<QuizResult | null>(null);
-    const [timeLeft, setTimeLeft] = useState<number>(60 * 1); // 1 minutes timer
+    const [timeLeft, setTimeLeft] = useState<number>(parseInt(quiz.testDuration,10)*60); 
     const [isFullScreen, setIsFullScreen] = useState<boolean>(false);
 
     useEffect(() => {

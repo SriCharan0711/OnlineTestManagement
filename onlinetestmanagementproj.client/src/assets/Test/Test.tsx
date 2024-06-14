@@ -21,6 +21,7 @@ interface Quiz {
     Questions: Question[];
     FacultyID: string;
     FacultyDepartment: string;
+    TestDuration: string;
 }
 
 const Test: React.FC = () => {
@@ -31,7 +32,8 @@ const Test: React.FC = () => {
         QuizDescription: '',
         Questions: [{ Id: '1', Text: '', Options: ['', '', '', ''], CorrectOption: '' }],
         FacultyID: '',
-        FacultyDepartment:''
+        FacultyDepartment: '',
+        TestDuration:''
     });
     const [errorMessage, setErrorMessage] = useState<string>('');
     const navigate = useNavigate();
@@ -136,6 +138,14 @@ const Test: React.FC = () => {
                     <textarea
                         name="QuizDescription"
                         value={quiz.QuizDescription}
+                        onChange={handleQuizChange}
+                        required
+                    />
+                    <label className="quiz-label">Test Duration (in minutes)</label>
+                    <input
+                        type="number"
+                        name="TestDuration"
+                        value={quiz.TestDuration}
                         onChange={handleQuizChange}
                         required
                     />

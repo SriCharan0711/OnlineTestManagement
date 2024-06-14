@@ -19,6 +19,7 @@ interface Quiz {
     questions: Question[];
     FacultyID: string;
     FacultyDepartment: string;
+    TestDuration: string;
 }
 
 const TakeTest: React.FC = () => {

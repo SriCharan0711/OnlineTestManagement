@@ -45,11 +45,12 @@ const App: React.FC = () => {
                         path: "codeeditor",
                         element: <CodeEditor />
                     },
-                    {
-                        path: "attempt-quiz",
-                        element: <AttemptQuiz />
-                    }
+                   
                 ]
+            },
+            {
+                path: "/student/attempt-quiz",
+                element: <AttemptQuiz />
             },
             {
                 path: "/faculty",
