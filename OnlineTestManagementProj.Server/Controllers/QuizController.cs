@@ -65,6 +65,17 @@ namespace OnlineTestManagementProj.Server.Controllers
             return Ok(updatedQuiz); 
         }
 
+        [HttpGet("getQuizById/{quizId}")]
+        public async Task<ActionResult<Quiz>>GetQuizById(string quizId)
+        {
+            var quiz=await _quizService.GetQuizById(quizId);
+            if (quiz == null)
+            {
+                return NotFound("Quiz not found");
+            }
+            return Ok(quiz);
+        }
+
         [HttpPost("submitQuiz")]
         public async Task<ActionResult<QuizResult>> SubmitQuiz([FromBody] QuizSubmission submission)
         {
