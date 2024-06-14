@@ -44,6 +44,8 @@ namespace ServiceLayer.ServiceLayer
             return await _quizRepository.GetQuizById(quizId);
         }
 
+    
+
         public async Task<List<QuizResult>>GetQuizResultsByStudentID(string studentID)
         {
             return await _quizRepository.GetQuizResultsByStudentID(studentID);
