@@ -13,12 +13,12 @@ import FacultyRegister from './assets/Register/FacultyRegister';
 
 import TakeTest from './assets/TakeTest/TakeTest';
 import DashBoard from './assets/DashBoard/DashBoard';
-import FacultyProfile from './assets/Profile/FacultyProfile';
+/*import FacultyProfile from './assets/Profile/FacultyProfile';*/
 import StudentProfile from './assets/Profile/StudentProfile';
 import Header from './assets/Header/Header';
 import AttemptQuiz from './assets/AttemptQuiz/AttemptQuiz';
 import UpdateQuiz from './assets/UpdateQuiz';
-
+import Faculty from './assets/Faculty';
 
 const App: React.FC = () => {
     const router = createBrowserRouter([{
@@ -63,7 +63,7 @@ const App: React.FC = () => {
                     },
                     {
                         path: "profile",
-                        element: <FacultyProfile />
+                        element: <Faculty /> //Changed element for profile path
                     },
                     {
                         path: "dashboard",

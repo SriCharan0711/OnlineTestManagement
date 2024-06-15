@@ -1,4 +1,5 @@
 import { useNavigate } from 'react-router-dom';
+
 import './LoginPage.css';
 function LoginPage() {
     const navigate = useNavigate();
@@ -9,29 +10,32 @@ function LoginPage() {
     const toFacultyLogin = () => {
         navigate('/facultylogin')
     }
-    const toStudentRegister = () => {
-        navigate('/studentreg')
-    }
-    const toFacultyRegister = () => {
-        navigate('/facultyreg')
-    }
+    
     return (
-        <div className="loginpage">
-            <h1 style={{ textAlign: "center", marginBottom: "25px" }}>
-                HELLO ,WELCOME!!!
-            </h1>
-            <div style={{ textAlign: "center", marginTop: "10px" }}>
-                <button onClick={toStudentLogin} style={{ backgroundColor: "lightgreen", padding: "10px", color: "blue" }}>Login as Student</button>
-            </div>
-            <div style={{ textAlign: "center", marginTop: "10px" }}>
-                <button onClick={toFacultyLogin} style={{ backgroundColor: "lightgreen", padding: "10px", color: "blue" }}>Login as Faculty</button>
-            </div>
+        <div className="container ">
+            <div className="shadow-lg d-flex flex-row ">
+                <img src="https://i.pinimg.com/564x/c5/94/b1/c594b11290587d26c51f64bbf27a6f99.jpg"></img>
+                <h1 className="mt-5" >Login </h1>
+                <div className="d-flex flex-row  " style={{ marginTop: "150px" }}>
 
-            <div style={{ textAlign: "center", marginTop: "100px" }}>
-                <div style={{ textAlign: "center", marginTop: "10px", color: "red" }}> <h3>Didn't SignUp?</h3></div>
-                <div style={{ textAlign: "center", marginTop: "10px" }}></div> <button onClick={toStudentRegister} style={{ backgroundColor: "lightgreen", padding: "10px", color: "blue" }}>Register as Student</button>
-                <div style={{ textAlign: "center", marginTop: "10px" }}></div>  <button onClick={toFacultyRegister} style={{ backgroundColor: "lightgreen", padding: "10px", color: "blue" }}>Register as Faculty</button>
+                    <div>
+                        <img onClick={toStudentLogin} className="rounded-circle p-2 shadow me-5" height="150px" src="https://static.thenounproject.com/png/35785-200.png"></img>
+                        <p className="ms-5 mt-3">Student</p>
+                    </div>
+                    <div>
+                        <img onClick={toFacultyLogin} className=" d-inline shadow rounded-circle p-2" height="150px" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuiTdi_RMnhHsEbSEZtTcd43yNi5AFzEtDhBDzsQtIShGxeo_W4Vwpk1k9QPyyV_J4bhw&usqp=CAU"></img>
+                        <p className="ms-5 mt-3">Faculty</p>
+                    </div>
+
+                </div>
+                       
+                    
+                
+               
+
             </div>
+           
+            
         </div>
 
 

@@ -3,6 +3,7 @@ import { Outlet } from 'react-router-dom';
 import './HeaderStyles.css';
 import Student from '../Student';
 import Faculty from '../Faculty';
+import { IoMdPerson } from "react-icons/io";
 
 function Header() {
     const location = useLocation();
@@ -31,8 +32,8 @@ function Header() {
                                 <Link className="nav-item" to="codeeditor">
                                     CodeNow
                                 </Link>
-                                <Link className="nav-item" to="profile">
-                                    Profile
+                                <Link className="nav-item"  to="profile">
+                                    <IoMdPerson />Profile 
                                 </Link>
                             </>
                         )}

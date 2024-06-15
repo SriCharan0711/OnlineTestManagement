@@ -1,7 +1,9 @@
-.quiz-list {
-    margin: 20px;
-    padding: 20px;
-}
+/*body{
+   
+    background-image: url("https://img.freepik.com/free-vector/hand-drawn-school-supplies-pattern-background_23-2150855728.jpg?w=900&t=st=1718385076~exp=1718385676~hmac=f973466bf656f49713db986ca3b10a51121ddf5cc2dfb91de7187de40502eb0d");
+    background-repeat:no-repeat;
+    background-size:cover;
+}*/
 
 .quiz-card {
     border: 1px solid #ccc;
@@ -18,14 +20,14 @@
         margin: 0 0 16px;
     }
 
-    .quiz-card button {
+   /* .quiz-card button {
         padding: 8px 16px;
         background-color: #007bff;
         color: white;
         border: none;
         border-radius: 4px;
         cursor: pointer;
-    }
+    }*/
 
         .quiz-card button:hover {
             background-color: #0056b3;

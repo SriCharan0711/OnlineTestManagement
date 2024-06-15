@@ -39,3 +39,12 @@ span {
     color: red;
     font-size: 0.9em;
 }
+a{
+    cursor:pointer;
+}
+/*body {
+    background-image: url("https://img.freepik.com/free-vector/hand-drawn-school-supplies-pattern-background_23-2150855728.jpg?w=900&t=st=1718385076~exp=1718385676~hmac=f973466bf656f49713db986ca3b10a51121ddf5cc2dfb91de7187de40502eb0d");
+    background-repeat: no-repeat;
+    background-size:cover;
+    
+}*/

@@ -126,10 +126,10 @@ const Test: React.FC = () => {
     };
 
     return (
-        <div>
+        <div className="container">
             <ToastContainer position="top-right" autoClose={2000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover />
-            <form className="test-form" onSubmit={handleSubmit}>
-                <div className="quiz-details ">
+            <form className="test-form bg-light " onSubmit={handleSubmit}>
+                <div className="quiz-details">
                     <label className="quiz-label">Quiz Name</label>
                     <input
                         type="text"

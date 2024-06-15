@@ -64,7 +64,7 @@ const StudentRegister: React.FC = () => {
         <div>
             {error && <h2 className="text-danger text-center">{error}</h2>}
             {success && <h2 className="text-success text-center">{success}</h2>}
-            <div className="form-container" style={{ marginTop: "30px" }}>
+            <div className="form-container bg-light shadow" style={{ marginTop: "30px" }}>
                 <h2>Student Registration Form</h2>
                 <form onSubmit={handleSubmit}>
                     <div>

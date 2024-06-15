@@ -20,7 +20,9 @@ const LoginStudent: React.FC = () => {
 
     const [error, setError] = useState<string | null>(null);
     const [success, setSuccess] = useState<string | null>(null);
-   
+    const toStudentRegister = () => {
+        navigate('/studentreg')
+    }
 
     const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
         const { name, value } = e.target;
@@ -56,7 +58,7 @@ const LoginStudent: React.FC = () => {
         <div className="container">
             {error && <h2 className="text-danger text-center">{error}</h2>}
             {success && <h2 className="text-success text-center">{ success}</h2>}
-            <div className="form-container" style={{ marginTop: "50px" }}>
+            <div className="form-container bg-light shadow" style={{ marginTop: "50px" }}>
                 <h2>Student Login</h2>
                 <form onSubmit={handleSubmit}>
                     <div>
@@ -74,8 +76,8 @@ const LoginStudent: React.FC = () => {
                         <input type="password" name="password" value={credentials.password} onChange={handleChange} />
                         {error && !credentials.password && <span>Please enter your password</span>}
                     </div>
-
-                    <button className="btn btn-primary" type="submit" >Login</button>
+                    <a onClick={toStudentRegister} style={{ textDecoration: "underline", color:"blue" }}>Didn't Register? Click Here</a>
+                    <button className="btn btn-primary d-block" type="submit" >Login</button>
                 </form>
             </div>
         </div>

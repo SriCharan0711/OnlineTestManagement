@@ -49,22 +49,25 @@ const TakeTest: React.FC = () => {
     };
 
     return (
-        <div className="quiz-list">
-            <h2>Available Quizzes</h2>
-            {errorMessage && <div className="error-message">{errorMessage}</div>}
-            {quizzes.length > 0 ? (
-                quizzes.map((quiz) => (
-                    <div className="quiz-card" key={quiz.quizId}>
-                        <h3>{quiz.quizName}</h3>
-                        <p>{quiz.quizDescription}</p>
-                        <button onClick={() => handleAttemptQuiz(quiz)} >Attempt Quiz</button>
-                        <p>Posted By: {quiz.facultyName}</p>
-                    </div>
-                ))
-            ) : (
-                <p>No quizzes available.</p>
-            )}
+        <div className="container">
+            <div className="quiz-list">
+                <h2>Available Quizzes</h2>
+                {errorMessage && <div className="error-message">{errorMessage}</div>}
+                {quizzes.length > 0 ? (
+                    quizzes.map((quiz) => (
+                        <div className="card p-3 mt-3 w-50 mx-auto shadow" key={quiz.quizId}>
+                            <h3>{quiz.quizName}</h3>
+                            <p>{quiz.quizDescription}</p>
+                            <button className="btn btn-primary w-25 " onClick={() => handleAttemptQuiz(quiz)} >Attempt Quiz</button>
+                            <p>Posted By: {quiz.facultyName}</p>
+                        </div>
+                    ))
+                ) : (
+                    <p>No quizzes available.</p>
+                )}
+            </div>
         </div>
+       
     );
 };
 
