@@ -16,7 +16,6 @@
     <Folder Include="src\assets\DashBoard\" />
     <Folder Include="src\assets\AttemptQuiz\" />
     <Folder Include="src\assets\TakeTest\" />
-    <Folder Include="src\assets\Profile\" />
     <Folder Include="src\assets\Register\" />
     <Folder Include="src\assets\Test\" />
     <Folder Include="src\assets\ToDo\" />
