@@ -20,6 +20,8 @@ import AttemptQuiz from './assets/AttemptQuiz/AttemptQuiz';
 import UpdateQuiz from './assets/UpdateQuiz';
 import Faculty from './assets/Faculty';
 
+
+
 const App: React.FC = () => {
     const router = createBrowserRouter([{
         path: "/",
@@ -46,6 +48,7 @@ const App: React.FC = () => {
                         path: "codeeditor",
                         element: <CodeEditor />
                     },
+                   
                    
                 ]
             },
