@@ -19,6 +19,7 @@ import Header from './assets/Header/Header';
 import AttemptQuiz from './assets/AttemptQuiz/AttemptQuiz';
 import UpdateQuiz from './assets/UpdateQuiz';
 import Faculty from './assets/Faculty';
+import DetailedQuizReport from './assets/Profile/DetailedQuizReport';
 
 
 
@@ -47,6 +48,10 @@ const App: React.FC = () => {
                     {
                         path: "codeeditor",
                         element: <CodeEditor />
+                    },
+                    {
+                        path: "detailed-report/:quizID",
+                        element: <DetailedQuizReport />,
                     },
                    
                    
