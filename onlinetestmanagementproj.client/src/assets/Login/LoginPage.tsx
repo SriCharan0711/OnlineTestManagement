@@ -20,7 +20,7 @@ function LoginPage() {
                     <div className="d-flex flex-row  " style={{ marginTop: "70px",marginLeft:"100px" }}>
 
                         <div>
-                            <img onClick={toStudentLogin} className="rounded-circle p-2 shadow me-5" height="150px" src="https://static.thenounproject.com/png/35785-200.png"></img>
+                            <img onClick={toStudentLogin} className="rounded-circle p-2 shadow me-5" height="150px" src="https://static.thenounproject.com/png/556113-200.png"></img>
                             <p className="ms-5 mt-3">Student</p>
                         </div>
                         <div>

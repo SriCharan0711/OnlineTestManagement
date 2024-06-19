@@ -226,7 +226,7 @@ const StudentProfile: React.FC = () => {
                         <p><strong>Quiz Name:</strong> {result.quizName}</p>
                         <p><strong>Correct Answers:</strong> {result.correctAnswers} / {result.totalQuestions}</p>
                         <p><strong>Score:</strong> {result.score}%</p>
-                        <button className="btn btn-secondary mt-2" onClick={() => handleViewReport(result.quizID)}>
+                        <button className="btn btn-warning mt-2" onClick={() => handleViewReport(result.quizID)}>
                             View Report
                         </button>
                     </li>
