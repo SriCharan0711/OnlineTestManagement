@@ -58,22 +58,22 @@ const LoginStudent: React.FC = () => {
         <div className="container">
             {error && <h2 className="text-danger text-center">{error}</h2>}
             {success && <h2 className="text-success text-center">{ success}</h2>}
-            <div className="form-container bg-light shadow" style={{ marginTop: "50px" }}>
+            <div className="form w-50 mx-auto p-4 bg-light shadow" style={{ marginTop: "50px" }}>
                 <h2>Student Login</h2>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label>Roll No:</label>
-                        <input type="text" name="rollNo" value={credentials.rollNo} onChange={handleChange} />
+                        <input className="form-control" type="text" name="rollNo" value={credentials.rollNo} onChange={handleChange} />
                         {error && !credentials.rollNo && <span>Please enter your Student ID</span>}
                     </div>
                     <div>
                         <label>Email ID:</label>
-                        <input type="email" name="emailID" value={credentials.emailID} onChange={handleChange} />
+                        <input className="form-control" type="email" name="emailID" value={credentials.emailID} onChange={handleChange} />
                         {error && !credentials.emailID && <span>Please enter your email</span>}
                     </div>
                     <div>
                         <label>Password:</label>
-                        <input type="password" name="password" value={credentials.password} onChange={handleChange} />
+                        <input className="form-control" type="password" name="password" value={credentials.password} onChange={handleChange} />
                         {error && !credentials.password && <span>Please enter your password</span>}
                     </div>
                     <a onClick={toStudentRegister} style={{ textDecoration: "underline", color:"blue" }}>Didn't Register? Click Here</a>

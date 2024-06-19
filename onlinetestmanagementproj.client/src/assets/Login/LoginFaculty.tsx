@@ -58,27 +58,27 @@ const LoginFaculty: React.FC = () => {
         <div className="container mt-3">
             {error && <h2 className="text-danger text-center">{error}</h2>}
             {success && <h2 className="text-success text-center">{success}</h2>}
-            <div className="form-container bg-light shadow" style={{ marginTop: "50px" }}>
+            <div className="form w-50 mx-auto p-4 bg-light shadow" style={{ marginTop: "50px" }}>
                 <h2>Faculty Login</h2>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label>Faculty ID:</label>
-                        <input type="text" name="facultyID" value={credentials.facultyID} onChange={handleChange} />
+                        <input className="form-control" type="text" name="facultyID" value={credentials.facultyID} onChange={handleChange} />
                         {error && !credentials.facultyID && <span className="text-danger">Please enter your Faculty ID</span>}
                     </div>
                     <div>
                         <label>Email ID:</label>
-                        <input type="email" name="emailID" value={credentials.emailID} onChange={handleChange} />
+                        <input className="form-control" type="email" name="emailID" value={credentials.emailID} onChange={handleChange} />
                         {error && !credentials.emailID && <span className="text-danger">Please enter your email</span>}
                     </div>
                     <div>
                         <label>Password:</label>
-                        <input type="password" name="password" value={credentials.password} onChange={handleChange} />
+                        <input className="form-control" type="password" name="password" value={credentials.password} onChange={handleChange} />
                         {error && !credentials.password && <span className="text-danger">Please enter your password</span>}
                     </div>
                     <a onClick={toFacultyRegister} style={{ textDecoration: "underline", color: "blue" }}>Didn't Register? Click Here</a>
 
-                    <button type="submit" className="d-block">Login</button>
+                    <button type="submit" className=" btn btn-primary d-block">Login</button>
                 </form>
             </div>
         </div>

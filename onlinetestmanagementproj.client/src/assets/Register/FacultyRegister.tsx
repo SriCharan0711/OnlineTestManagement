@@ -33,7 +33,7 @@ const FacultyRegister: React.FC = () => {
 
     const navigate = useNavigate();
 
-    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement |HTMLSelectElement >) => {
         const { name, value } = e.target;
         setFaculty({ ...faculty, [name]: value });
     };
@@ -65,38 +65,48 @@ const FacultyRegister: React.FC = () => {
         <div>
             {error && <h2 className="text-center text-error">{error}</h2>}
             {success && <h2 className="text-center text-success">{success}</h2>}
-            <div className="form-container bg-light shadow" style={{ marginTop: "30px" }}>
+            <div className="form w-50 mx-auto p-4 bg-light shadow" style={{ marginTop: "30px" }}>
                 <h2>Faculty Registration Form</h2>
                 <form onSubmit={handleSubmit}>
                     <div>
                         <label>Name:</label>
-                        <input type="text" name="name" value={faculty.name} onChange={handleChange} />
+                        <input className="form-control" type="text" name="name" value={faculty.name} onChange={handleChange} />
                         {error && !faculty.name && <span>Please enter your name</span>}
                     </div>
                     <div>
                         <label>Email ID:</label>
-                        <input type="email" name="emailID" value={faculty.emailID} onChange={handleChange} />
+                        <input className="form-control" type="email" name="emailID" value={faculty.emailID} onChange={handleChange} />
                         {error && !faculty.emailID && <span>Please enter a valid email</span>}
                     </div>
                     <div>
                         <label>Faculty ID:</label>
-                        <input type="text" name="facultyID" value={faculty.facultyID} onChange={handleChange} />
+                        <input className="form-control" type="text" name="facultyID" value={faculty.facultyID} onChange={handleChange} />
                         {error && !faculty.facultyID && <span>Please enter your Faculty ID</span>}
                     </div>
                     <div>
                         <label>Create Password:</label>
-                        <input type="password" name="password" value={faculty.password} onChange={handleChange} />
+                        <input className="form-control" type="password" name="password" value={faculty.password} onChange={handleChange} />
                         {error && !faculty.password && <span>Please enter a password</span>}
                     </div>
                     <div>
                         <label>College Name:</label>
-                        <input type="text" name="collegeName" value={faculty.collegeName} onChange={handleChange} />
+                        <input className="form-control" type="text" name="collegeName" value={faculty.collegeName} onChange={handleChange} />
                         {error && !faculty.collegeName && <span>Please enter your college name</span>}
                     </div>
                     <div>
                         <label>Department:</label>
-                        <input type="text" name="department" value={faculty.department} onChange={handleChange} />
-                        {error && !faculty.department && <span>Please enter your department</span>}
+                        <select className="form-select" name="department" value={faculty.department} onChange={handleChange}>
+                            <option value="" disabled>Choose your department</option>
+                            <option value="Computer Science Engineering & CSBS">Computer Science Engineering & CSBS</option>
+                            <option value="Electronics and Communication Engineering">Electronics and Communication Engineering</option>
+                            <option value="Electrical and Electronics Engineering">Electrical and Electronics Engineering</option>
+                            <option value="Electronics and Instrumentation Engineering">Electronics and Instrumentation Engineering</option>
+                            <option value="Information Technology">Information Technology</option>
+                            <option value="Mechanical Engineering">Mechanical Engineering</option>
+                            <option value="Civil Engineering">Civil Engineering</option>
+                            <option value="Automobile Engineering">Automobile Engineering</option>
+                        </select>
+                        {error && !faculty.department && <span>Please select your department</span>}
                     </div>
                     <div>
                         <label>Phone Number:</label>
